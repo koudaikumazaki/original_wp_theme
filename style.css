@@ -1,0 +1,503 @@
+@charset "UTF-8";
+html body {
+  color: #333; }
+  html body h1 {
+    font-size: 2.8rem; }
+  html body h2 {
+    font-size: 2.2rem; }
+  html body h3 {
+    font-size: 1.8rem; }
+  html body p, html body li, html body td {
+    font-size: 1.5rem; }
+  html body h1, html body h2, html body h3 {
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: 'Roboto', sans-serif; }
+  @media (min-width: 1024px) {
+    html body h1 {
+      font-size: 5rem; }
+    html body h2 {
+      font-size: 3rem; }
+    html body h3 {
+      font-size: 2.4rem; }
+    html body p, html body li, html body td {
+      font-size: 2rem; } }
+
+header {
+  background: #333;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 75px; }
+  header .logoHamburger {
+    display: flex;
+    padding: 10px 0; }
+    header .logoHamburger .logo {
+      box-sizing: border-box;
+      text-align: left;
+      width: 50%;
+      margin-left: 3%; }
+    header .logoHamburger .hamburgerMenu {
+      box-sizing: border-box;
+      text-align: right;
+      width: 50%;
+      margin-right: 3%;
+      color: white;
+      position: absolute;
+      right: 0;
+      top: 20;
+      width: 50px;
+      /* クリックしやすいようにちゃんと幅を指定する */
+      height: 50px;
+      /* クリックしやすいようにちゃんと高さを指定する */
+      cursor: pointer;
+      z-index: 300; }
+      header .logoHamburger .hamburgerMenu .hamburger__line {
+        position: absolute;
+        left: 11px;
+        width: 35px;
+        height: 3px;
+        background-color: white;
+        transition: all .6s; }
+      header .logoHamburger .hamburgerMenu .hamburger__line--1 {
+        top: 12px; }
+      header .logoHamburger .hamburgerMenu .hamburger__line--2 {
+        top: 24px; }
+      header .logoHamburger .hamburgerMenu .hamburger__line--3 {
+        top: 36px; }
+    header .logoHamburger .openlink .hamburger__line--1 {
+      transform: rotate(45deg);
+      top: 20px; }
+    header .logoHamburger .openlink .hamburger__line--2 {
+      width: 0;
+      left: 50%; }
+    header .logoHamburger .openlink .hamburger__line--3 {
+      transform: rotate(-45deg);
+      top: 20px; }
+  header .spNavi {
+    display: none;
+    opacity: 0.9;
+    z-index: 10;
+    position: absolute;
+    background: #222;
+    width: 100%; }
+    header .spNavi ul {
+      margin: 0; }
+      header .spNavi ul li {
+        margin: 0;
+        padding: 0 5px 20px 5px;
+        text-align: center;
+        list-style: none;
+        letter-spacing: 0.05em; }
+        header .spNavi ul li a {
+          text-decoration: none;
+          color: white; }
+
+.wp-post-image {
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3); }
+
+article {
+  width: 100%;
+  padding-top: 75px; }
+  article .cover {
+    text-align: center; }
+    article .cover h1 {
+      margin: 0;
+      padding: 117px 5px; }
+      article .cover h1 span {
+        font-size: 1.5rem; }
+        @media (min-width: 1024px) {
+          article .cover h1 span {
+            font-size: 3rem; } }
+  article .contentBox {
+    padding-bottom: 50px;
+    text-align: center;
+    background: #f7f7f7; }
+    article .contentBox h2 {
+      padding-top: 50px; }
+    article .contentBox .profile {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; }
+    article .contentBox table {
+      margin-left: auto;
+      margin-right: auto;
+      table-layout: fixed; }
+      article .contentBox table tr .year {
+        width: 65px; }
+      article .contentBox table tr .month {
+        width: 35px; }
+      article .contentBox table tr td {
+        padding: 12px 5px; }
+    article .contentBox ul {
+      margin: 0 auto;
+      width: 300px; }
+      article .contentBox ul :last-child {
+        margin-bottom: 25px; }
+      article .contentBox ul .blogTitle {
+        text-align: left; }
+      article .contentBox ul li {
+        list-style: none;
+        text-align: left; }
+    @media (min-width: 1024px) {
+      article .contentBox ul {
+        width: 450px; } }
+    article .contentBox .picture {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px; }
+    article .contentBox .btn {
+      display: inline-block;
+      width: 120px;
+      border: 1px solid #222;
+      text-decoration: none;
+      color: #222;
+      padding: 10px 5px;
+      letter-spacing: 0.05em; }
+  article .work, article .blog {
+    background: white; }
+
+footer {
+  padding: 10px 0;
+  background: #333;
+  text-align: center;
+  color: white;
+  font-size: 10px; }
+
+.archive {
+  background: #f7f7f7;
+  padding-top: 50px; }
+  .archive .archiveBox {
+    text-align: center; }
+    .archive .archiveBox p {
+      margin-bottom: 0;
+      padding-bottom: 50px; }
+    .archive .archiveBox a {
+      text-decoration: none;
+      color: #222; }
+
+.pageLink {
+  padding: 20px 0;
+  background: #f7f7f7;
+  text-align: center; }
+  .pageLink .screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0; }
+  .pageLink .page-numbers {
+    font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 10px; }
+
+@media (min-width: 768px) {
+  .archive {
+    display: flex;
+    flex-flow: row wrap; }
+    .archive .archiveBox {
+      box-sizing: border-box;
+      width: 50%; } }
+.techSkill, .otherSkill {
+  background: #f7f7f7; }
+  .techSkill h2, .otherSkill h2 {
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 30px; }
+  .techSkill .skillList .skillBox, .otherSkill .skillList .skillBox {
+    display: flex;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    width: 80%;
+    margin: 0 auto; }
+    .techSkill .skillList .skillBox .skillIcon, .otherSkill .skillList .skillBox .skillIcon {
+      height: 75px;
+      width: 75px;
+      margin-right: 20px; }
+      .techSkill .skillList .skillBox .skillIcon img, .otherSkill .skillList .skillBox .skillIcon img {
+        width: 75px; }
+    .techSkill .skillList .skillBox .skillDescription .skillTitle, .otherSkill .skillList .skillBox .skillDescription .skillTitle {
+      margin: 0; }
+    .techSkill .skillList .skillBox .skillDescription p, .otherSkill .skillList .skillBox .skillDescription p {
+      margin-bottom: 0;
+      word-wrap: break-word; }
+
+@media (min-width: 1024px) {
+  .techSkill .skillList, .otherSkill .skillList {
+    display: flex;
+    flex-flow: row wrap; }
+    .techSkill .skillList .skillBox, .otherSkill .skillList .skillBox {
+      width: 45%; } }
+.star5_rating {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  white-space: nowrap;
+  color: #CCCCCC;
+  /* グレーカラー 自由に設定化 */
+  /*font-size: 30px; フォントサイズ 自由に設定化 */ }
+
+.star5_rating:before, .star5_rating:after {
+  content: '★★★★★'; }
+
+.star5_rating:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffcf32;
+  /* イエローカラー 自由に設定化 */ }
+
+.star5_rating[data-rate="5"]:after {
+  width: 100%; }
+
+/* 星5 */
+.star5_rating[data-rate="4.5"]:after {
+  width: 90%; }
+
+/* 星4.5 */
+.star5_rating[data-rate="4"]:after {
+  width: 80%; }
+
+/* 星4 */
+.star5_rating[data-rate="3.5"]:after {
+  width: 70%; }
+
+/* 星3.5 */
+.star5_rating[data-rate="3"]:after {
+  width: 60%; }
+
+/* 星3 */
+.star5_rating[data-rate="2.5"]:after {
+  width: 50%; }
+
+/* 星2.5 */
+.star5_rating[data-rate="2"]:after {
+  width: 40%; }
+
+/* 星2 */
+.star5_rating[data-rate="1.5"]:after {
+  width: 30%; }
+
+/* 星1.5 */
+.star5_rating[data-rate="1"]:after {
+  width: 20%; }
+
+/* 星1 */
+.star5_rating[data-rate="0.5"]:after {
+  width: 10%; }
+
+/* 星0.5 */
+.star5_rating[data-rate="0"]:after {
+  width: 0%; }
+
+/* 星0 */
+.singleWork, .single {
+  background: #f7f7f7; }
+
+.workImage, .workTitle, .workLink {
+  text-align: center; }
+
+.workBody {
+  width: 90%;
+  margin: 0 auto;
+  word-break: break-all; }
+
+.workImage, .workTitle, .workBody {
+  padding-top: 50px; }
+
+.workLink {
+  padding: 20px 0; }
+  .workLink a {
+    width: 49%;
+    display: inline-block;
+    font-size: 1.5rem; }
+    @media (min-width: 1024px) {
+      .workLink a {
+        font-size: 2rem; } }
+
+form {
+  background: #f7f7f7;
+  padding: 50px 0;
+  text-align: center; }
+  form .element_wrap label {
+    margin: 0 auto 5px auto;
+    width: 300px;
+    text-align: left;
+    font-size: 1.5rem; }
+  form .element_wrap .agreement {
+    display: inline;
+    width: 30px; }
+  form .element_wrap input {
+    width: 300px; }
+  form .element_wrap textarea {
+    width: 300px;
+    height: 500px; }
+  @media (min-width: 768px) {
+    form .element_wrap input, form .element_wrap textarea, form .element_wrap label {
+      width: 600px; } }
+  form .confirm label {
+    text-align: center; }
+
+.error_list {
+  padding: 10px 30px;
+  color: #ff2e5a;
+  font-size: 86%;
+  text-align: center;
+  border: 1px solid #ff2e5a;
+  border-radius: 5px;
+  list-style: none; }
+
+.sendComplete {
+  background: #f7f7f7;
+  text-align: center;
+  height: 300px; }
+  .sendComplete p {
+    margin: 0;
+    padding: 134px 0; }
+
+.hobby, .speciality {
+  background: #f7f7f7; }
+  .hobby h2, .speciality h2 {
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 30px; }
+  .hobby .hobbyList .hobbyBox, .hobby .hobbyList .specialityBox, .hobby .specialityList .hobbyBox, .hobby .specialityList .specialityBox, .speciality .hobbyList .hobbyBox, .speciality .hobbyList .specialityBox, .speciality .specialityList .hobbyBox, .speciality .specialityList .specialityBox {
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+    .hobby .hobbyList .hobbyBox .hobbyIcon, .hobby .hobbyList .hobbyBox .specialityIcon, .hobby .hobbyList .specialityBox .hobbyIcon, .hobby .hobbyList .specialityBox .specialityIcon, .hobby .specialityList .hobbyBox .hobbyIcon, .hobby .specialityList .hobbyBox .specialityIcon, .hobby .specialityList .specialityBox .hobbyIcon, .hobby .specialityList .specialityBox .specialityIcon, .speciality .hobbyList .hobbyBox .hobbyIcon, .speciality .hobbyList .hobbyBox .specialityIcon, .speciality .hobbyList .specialityBox .hobbyIcon, .speciality .hobbyList .specialityBox .specialityIcon, .speciality .specialityList .hobbyBox .hobbyIcon, .speciality .specialityList .hobbyBox .specialityIcon, .speciality .specialityList .specialityBox .hobbyIcon, .speciality .specialityList .specialityBox .specialityIcon {
+      height: 75px;
+      width: 75px;
+      margin: 0 auto 20px auto; }
+      .hobby .hobbyList .hobbyBox .hobbyIcon img, .hobby .hobbyList .hobbyBox .specialityIcon img, .hobby .hobbyList .specialityBox .hobbyIcon img, .hobby .hobbyList .specialityBox .specialityIcon img, .hobby .specialityList .hobbyBox .hobbyIcon img, .hobby .specialityList .hobbyBox .specialityIcon img, .hobby .specialityList .specialityBox .hobbyIcon img, .hobby .specialityList .specialityBox .specialityIcon img, .speciality .hobbyList .hobbyBox .hobbyIcon img, .speciality .hobbyList .hobbyBox .specialityIcon img, .speciality .hobbyList .specialityBox .hobbyIcon img, .speciality .hobbyList .specialityBox .specialityIcon img, .speciality .specialityList .hobbyBox .hobbyIcon img, .speciality .specialityList .hobbyBox .specialityIcon img, .speciality .specialityList .specialityBox .hobbyIcon img, .speciality .specialityList .specialityBox .specialityIcon img {
+        width: 75px; }
+    .hobby .hobbyList .hobbyBox .hobbyName .hobbyTitle, .hobby .hobbyList .hobbyBox .hobbyName .specialityName, .hobby .hobbyList .hobbyBox .specialityName .hobbyTitle, .hobby .hobbyList .hobbyBox .specialityName .specialityName, .hobby .hobbyList .specialityBox .hobbyName .hobbyTitle, .hobby .hobbyList .specialityBox .hobbyName .specialityName, .hobby .hobbyList .specialityBox .specialityName .hobbyTitle, .hobby .hobbyList .specialityBox .specialityName .specialityName, .hobby .specialityList .hobbyBox .hobbyName .hobbyTitle, .hobby .specialityList .hobbyBox .hobbyName .specialityName, .hobby .specialityList .hobbyBox .specialityName .hobbyTitle, .hobby .specialityList .hobbyBox .specialityName .specialityName, .hobby .specialityList .specialityBox .hobbyName .hobbyTitle, .hobby .specialityList .specialityBox .hobbyName .specialityName, .hobby .specialityList .specialityBox .specialityName .hobbyTitle, .hobby .specialityList .specialityBox .specialityName .specialityName, .speciality .hobbyList .hobbyBox .hobbyName .hobbyTitle, .speciality .hobbyList .hobbyBox .hobbyName .specialityName, .speciality .hobbyList .hobbyBox .specialityName .hobbyTitle, .speciality .hobbyList .hobbyBox .specialityName .specialityName, .speciality .hobbyList .specialityBox .hobbyName .hobbyTitle, .speciality .hobbyList .specialityBox .hobbyName .specialityName, .speciality .hobbyList .specialityBox .specialityName .hobbyTitle, .speciality .hobbyList .specialityBox .specialityName .specialityName, .speciality .specialityList .hobbyBox .hobbyName .hobbyTitle, .speciality .specialityList .hobbyBox .hobbyName .specialityName, .speciality .specialityList .hobbyBox .specialityName .hobbyTitle, .speciality .specialityList .hobbyBox .specialityName .specialityName, .speciality .specialityList .specialityBox .hobbyName .hobbyTitle, .speciality .specialityList .specialityBox .hobbyName .specialityName, .speciality .specialityList .specialityBox .specialityName .hobbyTitle, .speciality .specialityList .specialityBox .specialityName .specialityName {
+      margin: 0; }
+    .hobby .hobbyList .hobbyBox .hobbyName p, .hobby .hobbyList .hobbyBox .specialityName p, .hobby .hobbyList .specialityBox .hobbyName p, .hobby .hobbyList .specialityBox .specialityName p, .hobby .specialityList .hobbyBox .hobbyName p, .hobby .specialityList .hobbyBox .specialityName p, .hobby .specialityList .specialityBox .hobbyName p, .hobby .specialityList .specialityBox .specialityName p, .speciality .hobbyList .hobbyBox .hobbyName p, .speciality .hobbyList .hobbyBox .specialityName p, .speciality .hobbyList .specialityBox .hobbyName p, .speciality .hobbyList .specialityBox .specialityName p, .speciality .specialityList .hobbyBox .hobbyName p, .speciality .specialityList .hobbyBox .specialityName p, .speciality .specialityList .specialityBox .hobbyName p, .speciality .specialityList .specialityBox .specialityName p {
+      margin-bottom: 0;
+      word-wrap: break-word; }
+
+@media (min-width: 1024px) {
+  .hobby .hobbyList, .hobby .specialityList, .speciality .hobbyList, .speciality .specialityList {
+    display: flex;
+    flex-flow: row wrap; }
+    .hobby .hobbyList .hobbyBox, .hobby .hobbyList .specialityBox, .hobby .specialityList .hobbyBox, .hobby .specialityList .specialityBox, .speciality .hobbyList .hobbyBox, .speciality .hobbyList .specialityBox, .speciality .specialityList .hobbyBox, .speciality .specialityList .specialityBox {
+      width: 45%; } }
+#btn-backtotop {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  z-index: 1000;
+  transition: all 1s ease-out;
+  transition: bottom 0.2s ease-out;
+  opacity: 1; }
+  #btn-backtotop img {
+    width: 20px; }
+  @media screen and (max-width: 1023px) {
+    #btn-backtotop {
+      bottom: 10px;
+      right: 5px; } }
+  #btn-backtotop.fadein {
+    opacity: 1; }
+
+@media (min-width: 1024px) {
+  #btn-backtotop {
+    width: 80px;
+    height: 80px; }
+    #btn-backtotop img {
+      width: 40px;
+      margin-top: 23px; } }
+#btn-backtotop:hover {
+  background: #444; }
+
+/* はてブはアイコンフォントがないためテキストで代用 */
+.fa-hatena:before {
+  font-family: Verdana;
+  font-weight: bold;
+  content: 'B!'; }
+
+/* 上下のマージン */
+.share {
+  padding-bottom: 40px;
+  background: #f7f7f7; }
+
+.share ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.share ul:after {
+  display: block;
+  clear: both;
+  content: ''; }
+
+.share li {
+  float: left;
+  width: 25%;
+  /* ボタンの数に合わせて変更 */
+  margin: 0;
+  margin-top: 15px; }
+
+.share li a {
+  font-size: 14px;
+  /* フォントサイズ */
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff; }
+
+/* マウスオーバー時の透明度 */
+.share li a:hover {
+  opacity: .8; }
+
+.share li a:visited {
+  color: #fff; }
+
+/* ボタンの各ブランドカラー設定 */
+.tweet a {
+  background-color: #55acee; }
+
+.facebook a {
+  background-color: #315096; }
+
+.hatena a {
+  background-color: #008fde; }
+
+.line a {
+  background-color: #00c030; }
+
+/* スマホでの表示 */
+@media (max-width: 599px) {
+  .share li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 3px; }
+
+  .share li i {
+    font-size: 1.3em;
+    padding-top: 3px; }
+
+  /* スマホ表示ではテキスト非表示 */
+  .share li span {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */
