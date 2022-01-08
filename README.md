@@ -1,4 +1,5 @@
 # original_wp_theme
 ワードプレスの自作テーマです。
 
-現在は公開を停止しております。
+## URL
+https://olivecougar70.sakura.ne.jp/
